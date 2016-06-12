@@ -1,0 +1,186 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+	<meta name="renderer" content="webkit">
+	<title>jQuery+html5响应式页面滚屏代码 - 站长素材</title>
+	<!--[if lte IE 8]>
+	<style type="text/css">
+		html,body{width:100%; height:100%; overflow:scroll}
+		.section-btn{display:none;}
+	</style>
+	<![endif]-->
+</head>
+<body>
+	<section class="section-wrap">
+		<div class="section section-1">
+			<div class="title">
+				<img id="photo" class="animated fadeInUp" src="images/photo.png" />
+				<p id="s1a"  class="animated fadeInUp">马智恒</p>
+				<p id="s1b"  class="animated flipInY">别沮丧，生活就像心电图，一帆风顺就证明你挂了。</p>
+				<p id="s1c"  class="animated fadeIn list1">25岁</p>
+				<p id="s1d"  class="animated fadeIn list1">前端研发工程师</p>
+				<p id="s1e"  class="animated fadeIn list1">943234515@qq.com</p>
+			</div>
+		</div>
+		<div class="section section-2">
+			<div class="title">
+				<p id="s2a"  class="animated">个人经历</p>
+				<p class="animated sTitle s2b">2014年毕业于广东石油化工学院</p>
+				<p class="animated sTitle s2c">广州多迪网络科技</p>
+				<p class="animated list2 s2c">2014年1月-2014年6月优秀实习生</p>
+				<p class="animated sTitle s2d">新浪乐居（新浪房产频道）广州站美编</p>
+				<p class="animated list2 s2d">2014年7月-2015年7月</p>
+				<p class="animated list2 s2d">从事网页设计、平面设计等工作</p>
+			</div>
+		</div>
+		<div class="section section-3">
+			<div class="title">
+				<p id="s3a" class="animated">擅长技术</p>
+				<p id="s3b" class="animated list2">IT行业的学习需要持之以恒，知识深度与广度都很重要。而前端开发的重中之重就是原生javascript的理解，
+				<br/>一直都在不断琢磨《javascript高级程序设计》这本书来内化自己。</p>
+				<div id="skill" class="animated">
+					<div class="skill_icon"><img src="images/html1.png" /><p>html</p><div class="skill_flag"></div></div>
+					<div class="skill_icon"><img src="images/css1.png" /><p>css</p><div class="skill_flag"></div></div>
+					<div class="skill_icon"><img src="images/js1.png" /><p>js</p><div class="skill_flag"></div></div>
+				</div>
+			</div>
+		</div>
+		<div class="section section-4">
+			<div class="title">
+				<p id="s4a" class="animated">我的作品</p>
+				<div id="works">
+					<a href="https://bactery.github.io/daohang/" target="_blank" id="s4b" class="work animated" style="margin-left:0;"><div class="night">中国移动极速导航</div></a>
+					<a href="https://bactery.github.io/kangtuo/index.html" target="_blank" id="s4c" class="work animated"><div class="night">康拓电子官网页面</div></a>
+					<a href="http://gz.house.sina.com.cn/zhuanti/cjlhyh/" target="_blank" id="s4d" class="work animated"><div class="night">新浪乐居专题页面</div></a>
+				</div>
+				<p id="s4e" class="animated list2">点击图片进入作品demo</p>
+			</div>
+		</div>
+		<div class="section section-5">
+			<div class="title">
+				<p id="s5a" class="animated">谢谢关注</p>
+				<p id="s5b" class="animated sTitle">灵感 代码 梦想 未来</p>
+				<div id="colorful">
+					<span id="s5c" class="animated">INSPIRATION</span>
+					<span id="s5d" class="animated">CODE</span>
+					<span id="s5e" class="animated">DREAM</span>
+					<span id="s5f" class="animated">FUTURE</span>
+				</div>
+				<div id="s5g" class="animated">
+					<p>学有所得，会让我有一种很喜悦的感受</p>
+					<p>前端更贴近用户，这种体验非常美妙</p>
+					<p>我愿保持耐心与兴趣，在前端的旅程中踏实走下去</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<ul class="section-btn">
+	  <li class="on"></li>
+	  <li></li>
+	  <li></li>
+	  <li></li>
+	  <li></li>
+	</ul>
+	<ul class="section-btn1">
+	  <li>首页</li>
+	  <li>个人经历</li>
+	  <li>擅长技术</li>
+	  <li>我的作品</li>
+	  <li>谢谢关注</li>
+	</ul>
+
+<link rel="stylesheet" type="text/css" href="css.css">
+<link rel="stylesheet" type="text/css" href="animate.css">
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/mousewheel.js"></script>
+<script type="text/javascript">
+	$(function(){
+		var i=0;
+		var $btn = $('.section-btn li'),
+			$wrap = $('.section-wrap'),
+			$arrow = $('.arrow'),
+			$btn1=$('.section-btn1 li');
+		
+		/*当前页面赋值*/
+		function up(){i++;if(i==$btn.length){i=0};}
+		function down(){i--;if(i<0){i=$btn.length-1};}
+		
+		/*页面滑动*/
+		function run(){
+			$btn.eq(i).addClass('on').siblings().removeClass('on');	
+			$wrap.attr("class","section-wrap").addClass("put-section-"+i);
+			switch(i){
+				case 1:
+					$('#s2a').addClass('fadeInUp');
+					$('.s2b').addClass('bounceInLeft');
+					$('.s2c').addClass('bounceInLeft');
+					$('.s2d').addClass('bounceInLeft');
+					break;
+				case 2:
+					$('#s3a').addClass('fadeInUp');
+					$('#s3b').addClass('flipInX');
+					$('#skill').addClass('fadeInUp');
+					break;
+				case 3:
+					$('#s4a').addClass('fadeInUp');
+					$('#s4b').addClass('bounceInLeft');
+					$('#s4c').addClass('bounceInLeft');
+					$('#s4d').addClass('bounceInLeft');
+					$('#s4e').addClass('fadeInUp');
+					break;
+				case 4:
+					$('#s5a').addClass('fadeInUp');
+					$('#s5b').addClass('flipInX');
+					$('#s5c').addClass('fadeInUp');
+					$('#s5d').addClass('fadeInUp');
+					$('#s5e').addClass('fadeInUp');
+					$('#s5f').addClass('fadeInUp');
+					$('#s5g').addClass('fadeInDown');
+					break;
+			}
+		};
+		/*右侧按钮文字*/
+		$btn.each(function(index) {
+			$(this).hover(function(){
+				$btn1.eq(index).addClass('on1');
+			},function(){
+				$btn1.eq(index).removeClass('on1');
+			});
+		});
+		
+		/*右侧按钮点击*/
+		$btn.each(function(index) {
+			$(this).click(function(){
+				i=index;
+				run();
+			})
+		});
+		
+		/*响应鼠标*/
+		$wrap.one('mousewheel',mouse_);
+		function mouse_(event){
+			if(event.deltaY<0) {up()}
+			else{down()}
+			run();
+			setTimeout(function(){$wrap.one('mousewheel',mouse_)},1000)
+		};
+		
+		/*响应键盘上下键*/
+		$(document).one('keydown',k);
+		function k(event){
+			var e=event||window.event;
+			var key=e.keyCode||e.which||e.charCode;
+			switch(key)	{
+				case 38: down();run();	
+				break;
+				case 40: up();run();	
+				break;
+			};
+			setTimeout(function(){$(document).one('keydown',k)},1000);
+		}
+	});
+</script>
+</body>
+</html>
