@@ -1,7 +1,7 @@
 body{color:#222;-webkit-text-size-adjust:none;}
 		body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl, dt,dd,ul,ol,li,pre,form,fieldset,legend,button,input,textarea,th,td,iframe{margin:0; padding:0;}
 		h1,h2,h3,h4,h5,h6{font-size:100%;}
-		body,button,input,select,textarea {font-family:微软雅黑,Tahoma,Arial,Roboto,”Droid Sans”,”Helvetica Neue”,”Droid Sans Fallback”,”Heiti SC”,sans-self;font-size:62.5%; line-height:1.5;}
+		body,button,input,select,textarea {font-family:microsoft yahei,Arial;}
 		ol,ul{list-style:none;}
 		
 		html,body{ width:100%; height:100%; overflow:hidden;}
@@ -39,7 +39,7 @@ body{color:#222;-webkit-text-size-adjust:none;}
     height: 160px;
     width: 160px;
 	margin:0 auto;
-	animation-duration:3s;
+	animation-duration:3s;-webkit-animation-duration:3s;
 	margin-top:23px;
 }	
 .list1{
@@ -52,25 +52,27 @@ body{color:#222;-webkit-text-size-adjust:none;}
 	margin-top:18px;
 	animation-duration:1.5s;
 	animation-delay:1.0s;
+	-webkit-animation-duration:1.5s;
+	-webkit-animation-delay:1.0s;
 	text-shadow: 1px 2px #3f89bd, 2px 4px #a1cdec;
 }
 #s1b{
 	font-size:18px;
 	font-weight:bold;
 	margin:16px 0 5px 0;
-	animation-delay:1.7s;
+	animation-delay:1.7s;-webkit-animation-delay:1.7s;
 }
 #s1c{
 	color:#174f72;
-	animation-delay:2.6s;
+	animation-delay:2.6s;-webkit-animation-delay:2.6s;
 }
 #s1d{
 	color:#174f72;
-	animation-delay:3.0s;
+	animation-delay:3.0s;-webkit-animation-delay:3.0s;
 }
 #s1e{
 	color:#174f72;
-	animation-delay:3.4s;
+	animation-delay:3.4s;-webkit-animation-delay:3.4s;
 }
 
 /*第二页*/
@@ -78,8 +80,8 @@ body{color:#222;-webkit-text-size-adjust:none;}
 	font-size:2.25em;
 	font-weight:bold;
 	margin:58px 0 32px 0;
-	animation-duration:1.3s;
-	animation-delay:1.0s;
+	animation-duration:1.3s;-webkit-animation-duration:1.3s;
+	animation-delay:1.0s;-webkit-animation-delay:1.0s;
 	text-shadow: 1px 2px #22c3aa, 2px 4px #aee2d9;
 }
 .list2{
@@ -93,13 +95,13 @@ body{color:#222;-webkit-text-size-adjust:none;}
 }
 
 .s2b{
-	animation-delay:2s;
+	animation-delay:2s;-webkit-animation-delay:2s;
 }
 .s2c{
-	animation-delay:2.3s;
+	animation-delay:2.3s;-webkit-animation-delay:2.3s;
 }
 .s2d{
-	animation-delay:2.6s;
+	animation-delay:2.6s;-webkit-animation-delay:2.6s;
 }
 
 /*第三页*/
@@ -107,18 +109,18 @@ body{color:#222;-webkit-text-size-adjust:none;}
 	font-size:2.25em;
 	font-weight:bold;
 	margin:35px 0 15px 0;
-	animation-duration:1.3s;
-	animation-delay:1.0s;
+	animation-duration:1.3s;-webkit-animation-duration:1.3s;
+	animation-delay:1.0s;-webkit-animation-delay:1.0s;
 	text-shadow: 1px 2px #cb832f, 2px 4px #f1c99a;
 }
 #s3b{
 	line-height:28px;
-	animation-delay:1.7s;
+	animation-delay:1.7s;-webkit-animation-delay:1.7s;
 }
 #skill{
 	width:760px; height:260px;
 	margin:30px auto;
-	animation-delay:2.2s;
+	animation-delay:2.2s;-webkit-animation-delay:2.2s;
 }
 .skill_icon{
 	width:120px; height:100px;
@@ -129,9 +131,10 @@ body{color:#222;-webkit-text-size-adjust:none;}
 	margin:20px auto;
 	transform: scale(1);
     transition: transform 0.25s ease 0s;
+	-webkit-transition: transform 0.25s ease 0s;
 }
 .skill_icon img:hover{
-	transform:scale(1.2);
+	transform:scale(1.2);-webkit-transform:scale(1.2);
 }
 .skill_icon p{
 	font-size:18px;
@@ -148,8 +151,8 @@ body{color:#222;-webkit-text-size-adjust:none;}
 	font-size:2.25em;
 	font-weight:bold;
 	margin:35px 0 15px 0;
-	animation-duration:1.3s;
-	animation-delay:1.0s;
+	animation-duration:1.3s;-webkit-animation-duration:1.3s;
+	animation-delay:1.0s;-webkit-animation-delay:1.0s;
 	text-shadow: 1px 2px #2e9194, 2px 4px #aaedef;
 }
 #works{
@@ -170,24 +173,24 @@ body{color:#222;-webkit-text-size-adjust:none;}
 }
 #s4b{
 	background:#beedef url(images/icon1.png) no-repeat center center;
-	animation-delay:1.5s;
+	animation-delay:1.5s;-webkit-animation-delay:1.5s;
 	
 }
 #s4c{
 	background:#beedef url(images/icon2.png) no-repeat center center;
-	animation-delay:1.9s;
+	animation-delay:1.9s;-webkit-animation-delay:1.9s;
 	
 }
 #s4d{
 	background:#beedef url(images/icon3.png) no-repeat center center;
-	animation-delay:2.4s;
+	animation-delay:2.4s;-webkit-animation-delay:2.4s;
 }
 #s4e{
 	margin-top:25px;
 	font-weight:bold;
 	font-size:14px;
 	color:#1c7477;
-	animation-delay:2.7s;
+	animation-delay:2.7s;-webkit-animation-delay:2.7s;
 }
 .night{
 	color:#fff;
@@ -209,8 +212,8 @@ body{color:#222;-webkit-text-size-adjust:none;}
 	font-size:2.25em;
 	font-weight:bold;
 	margin:48px 0 15px 0;
-	animation-duration:1.3s;
-	animation-delay:1.0s;
+	animation-duration:1.3s;-webkit-animation-duration:1.3s;
+	animation-delay:1.0s;-webkit-animation-delay:1.0s;
 	text-shadow: 1px 2px #22c3aa, 2px 4px #aee2d9;
 }
 .section-5 .sTitle{
@@ -226,28 +229,28 @@ body{color:#222;-webkit-text-size-adjust:none;}
 }
 #s5b{
 	margin-top:30px;
-	animation-delay:1.7s;
+	animation-delay:1.7s;-webkit-animation-delay:1.7s;
 }
 #s5c{
 	color:#d03ca8;
-	animation-delay:2.2s;
+	animation-delay:2.2s;-webkit-animation-delay:2.2s;
 }
 #s5d{
 	color:#2b4fd5;
-	animation-delay:2.4s;
+	animation-delay:2.4s;-webkit-animation-delay:2.4s;
 }
 #s5e{
 	color:#fff49b;
-	animation-delay:2.6s;
+	animation-delay:2.6s;-webkit-animation-delay:2.6s;
 }
 #s5f{
 	color:#0f702d;
-	animation-delay:2.8s;
+	animation-delay:2.8s;-webkit-animation-delay:2.8s;
 }
 #s5g{
 	margin-top:56px;
 	font-size:16px; 
 	font-weight:normal;
 	line-height:30px;
-	animation-delay:3.1s;
+	animation-delay:3.1s;-webkit-animation-delay:3.1s;
 }
